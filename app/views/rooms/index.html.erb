@@ -4,11 +4,8 @@
 
 <div id="rooms">
   <% @rooms.each do |room| %>
-    <%= render room %>
-    <p>
-      <%= link_to "Show this room", room %>
-    </p>
+   <%= link_to room.name.capitalize, room %>
+   <br>
   <% end %>
 </div>
-
 <%= link_to "New room", new_room_path %>
